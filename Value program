@@ -1,0 +1,8 @@
+#include <stdio.h>
+int main()
+{ int intnum=4
+  float floatnum=5.678
+  printf("%d/n",intnum);
+  printf("%.2f/n",floatnum);
+  return 0;
+}
