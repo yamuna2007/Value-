@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int n, key, found = 0;
+
+    scanf("%d", &n);  // read number of elements
+
+    int arr[n];
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);  // read array elements
+    }
+
+    scanf("%d", &key);  // element to search
+
+    // Linear search
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == key) {
+            found = 1;
+            break;
+        }
+    }
+
+    if (found) {
+        printf("%d is presented in an array.\n", key);
+    } else {
+        printf("%d is not presented in an array.\n", key);
+    }
+
+    return 0;
+}
