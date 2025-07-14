@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    // Check if number of passengers is negative
+    if (n <= 0) {
+        printf("Invalid Input\n");
+        return 0;
+    }
+
+    int ages[n];
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &ages[i]);
+        // Check if any age is negative
+        if (ages[i] < 0) {
+            printf("Invalid Input\n");
+            return 0;
+        }
+    }
+
+    int youngest = ages[0];
+    int oldest = ages[0];
+
+    for (int i = 1; i < n; i++) {
+        if (ages[i] < youngest) {
+            youngest = ages[i];
+        }
+        if (ages[i] > oldest) {
+            oldest = ages[i];
+        }
+    }
+
+    printf("Youngest=%d\n", youngest);
+    printf("Oldest=%d\n", oldest);
+
+    return 0;
+}
