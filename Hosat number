@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int num, temp, digit, sum = 0;
+
+    // Read input
+    scanf("%d", &num);
+
+    // Make a copy of the number
+    temp = num;
+
+    // Calculate sum of digits
+    while (temp > 0) {
+        digit = temp % 10;
+        sum += digit;
+        temp /= 10;
+    }
+
+    // Check if number is divisible by the sum of its digits
+    if (num % sum == 0) {
+        printf("Harshad Number\n");
+    } else {
+        printf("Not Harshad Number\n");
+    }
+
+    return 0;
+}
