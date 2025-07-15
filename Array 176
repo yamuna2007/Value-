@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int n, i, key, found = 0;
+    scanf("%d", &n); // number of buildings
+    
+    int arr[n];
+    for (i = 0; i < n; i++) {
+        scanf("%d", &arr[i]); // door numbers
+    }
+
+    scanf("%d", &key); // friend's address to search
+
+    for (i = 0; i < n; i++) {
+        if (arr[i] == key) {
+            printf("Door Number is %03d-DN\n", i);
+            found = 1;
+            break;
+        }
+    }
+
+    if (!found) {
+        printf("-1\n");
+    }
+
+    return 0;
+}
