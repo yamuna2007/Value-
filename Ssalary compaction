@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int basic;
+    float hra, da, gross;
+
+    // Read basic salary
+    scanf("%d", &basic);
+
+    // Calculate HRA and DA based on condition
+    if (basic < 15000) {
+        hra = 0.15 * basic;
+        da = 0.90 * basic;
+    } else {
+        hra = 5000;
+        da = 0.98 * basic;
+    }
+
+    // Calculate gross salary
+    gross = basic + hra + da;
+
+    // Print gross salary with 2 decimal places
+    printf("%.2f\n", gross);
+
+    return 0;
+}
